@@ -171,7 +171,7 @@ export default function Scene({ script }) {
   }, [done, node, transitionTo, skipTypewriter])
 
   useEffect(() => {
-    document.documentElement.style.setProperty('--cursor-size', node?.ending ? '600px' : '250px')
+    document.documentElement.style.setProperty('--cursor-size', node?.ending ? '600px' : '400px')
   }, [node?.ending])
 
   if (!node) return <p>not found: {id}</p>

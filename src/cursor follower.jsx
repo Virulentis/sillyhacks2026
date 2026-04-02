@@ -32,7 +32,7 @@ export default function CustomCursor() {
     };
   }, []);
 
-  const background = useMotionTemplate`radial-gradient(circle var(--cursor-size, 250px) at ${smoothMouse.x}px ${smoothMouse.y}px, transparent 0%, rgba(0,0,0,0.95) 80%)`;
+  const background = useMotionTemplate`radial-gradient(circle var(--cursor-size, 400px) at ${smoothMouse.x}px ${smoothMouse.y}px, transparent 0%, rgba(0,0,0,0.95) 80%)`;
 
   return (
     <motion.div
