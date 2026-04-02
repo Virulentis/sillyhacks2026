@@ -37,7 +37,7 @@
     },
     "examine_symbols": {
       "id": "examine_symbols",
-      "text": "You crouch and trace the <span style=\"color: #867979\">carvings</span> with your finger. Not Latin, not Greek - not any alphabet you have encountered. Yet as you stare, you feel a creeping sense that they are somehow readable, that meaning lurks just below your <a href='/comprehension'>comprehension</a> like something vast moving beneath dark water. Warren pulls your hand away firmly. 'Don't linger on them. Help me with this slab.'",
+      "text": "You crouch and trace the <span style=\"color: #867979\">carvings</span> with your finger. Not Latin, not Greek - not any alphabet you have encountered. Yet as you stare, you feel a creeping sense that they are somehow readable, that meaning lurks just below your <a href='./comprehension'>comprehension</a> like something vast moving beneath dark water. Warren pulls your hand away firmly. 'Don't linger on them. Help me with this slab.'",
       "choices": [
         { "text": "Help him open the slab", "next": "open_slab" },
         { "text": "Tell Warren you want to leave", "next": "late_refusal" },
@@ -216,5 +216,6 @@
       "ending_type": "enlightenment",
       "ending_label": "You Found This Place. That Was Never An Accident."
     }
+    
   }
 }
