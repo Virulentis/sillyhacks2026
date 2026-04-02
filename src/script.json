@@ -1,0 +1,220 @@
+{
+  "title": "The Statement of Randolph Carter",
+  "author": "H.P. Lovecraft (1920) - Public Domain",
+  "start": "start",
+  "nodes": {
+    "start": {
+      "id": "start",
+      "text": "The night of October 7th, 1919. You are Randolph Carter, standing at the iron gate of the old Gainsville burying ground. Your companion, the occultist Harley Warren, clutches a worn black book under one arm and a coil of telephone wire under the other. The cemetery stretches before you, pale headstones catching the moonlight like broken teeth. 'Come,' says Warren. 'It is beneath the large stone in the far corner. I know what lies below.'",
+      "choices": [
+        { "text": "Follow Warren into the cemetery", "next": "cemetery_walk" },
+        { "text": "Ask Warren what exactly is down there", "next": "ask_warren" }
+      ]
+    },
+    "ask_warren": {
+      "id": "ask_warren",
+      "text": "Warren turns to you, and in the moonlight his expression is unreadable. 'Some things,' he says quietly, 'are better confronted than described. You would not believe me if I told you.' There is a finality to his tone that unsettles you deeply.",
+      "choices": [
+        { "text": "Follow Warren into the cemetery", "next": "cemetery_walk" },
+        { "text": "Refuse and go home", "next": "refuse_start" }
+      ]
+    },
+    "refuse_start": {
+      "id": "refuse_start",
+      "text": "You tell Warren you want no part of this. He looks at you for a long moment - not with contempt, but with something like relief. 'Perhaps that is wise,' he says softly. You walk home alone. In the morning, Harley Warren is reported missing. His body is never found. You wake sometimes in the dark, wondering what he saw - and whether, had you stayed, you might have saved him. Or merely shared his fate.",
+      "choices": [],
+      "ending": true,
+      "ending_type": "survival",
+      "ending_label": "You Live. Warren Does Not."
+    },
+    "cemetery_walk": {
+      "id": "cemetery_walk",
+      "text": "You pass between the iron gates. The air grows colder with each step, and the silence is wrong - no insects, no wind, only the soft crunch of dead leaves. Warren leads you to a flat stone slab in the far corner, half-hidden by a gnarled oak. Strange symbols are carved into its surface. He sets down his equipment and begins working the slab loose with a crowbar.",
+      "choices": [
+        { "text": "Help him open the slab", "next": "open_slab" },
+        { "text": "Examine the strange symbols on the stone", "next": "examine_symbols" }
+      ]
+    },
+    "examine_symbols": {
+      "id": "examine_symbols",
+      "text": "You crouch and trace the <span style=\"color: #867979\">carvings</span> with your finger. Not Latin, not Greek - not any alphabet you have encountered. Yet as you stare, you feel a creeping sense that they are somehow readable, that meaning lurks just below your <a href='/comprehension'>comprehension</a> like something vast moving beneath dark water. Warren pulls your hand away firmly. 'Don't linger on them. Help me with this slab.'",
+      "choices": [
+        { "text": "Help him open the slab", "next": "open_slab" },
+        { "text": "Tell Warren you want to leave", "next": "late_refusal" },
+        { "text": "Ignore Warren and keep staring - you are almost there", "next": "decode_symbols" }
+      ]
+    },
+    "decode_symbols": {
+      "id": "decode_symbols",
+      "text": "Warren steps away to retrieve his crowbar and you have a moment alone with the stone. You lean close. Each glyph <strong>c</strong>hanges as you watch it - not in shape, but in meaning. <strong>O</strong>nce you see it, you cannot unsee it. <strong>D</strong>arkness is not imprisoned below this stone. It is <strong>e</strong>verywhere already. It is looking at you now. Warren returns. You realize you have been crouching here for twenty minutes. He looks at your face and says nothing.",
+      "choices": [
+        { "text": "Help Warren open the slab - you know what you are doing now", "next": "open_slab" },
+        { "text": "Tell Warren what you understood", "next": "tell_warren_decoded" }
+      ]
+    },
+    "tell_warren_decoded": {
+      "id": "tell_warren_decoded",
+      "text": "You grab Warren's arm and tell him what the symbols said - not that something is imprisoned below, but that something chose this place willingly. That it is still choosing. Warren goes very still. He looks at the stone. Then back at you. 'How do you know that?' His voice is careful, the way a man is careful around a fire that might spread. 'I read it,' you say. He stares at you for a long moment. 'No one reads this script on a first encounter,' he says quietly. 'No one who was already human.'",
+      "choices": [
+        { "text": "Volunteer to go down first - you feel drawn to it", "next": "enlightened_descent" },
+        { "text": "Tell Warren you both need to leave. Now.", "next": "flee" }
+      ]
+    },
+    "late_refusal": {
+      "id": "late_refusal",
+      "text": "Something about those symbols has shaken you to your core. Warren nods slowly, as though he half-expected this. 'Wait here then. Hold the end of the wire. If I don't come back within the hour - cut it and run. Don't come down for me. Promise me that.' His voice is very serious. You promise. He descends alone. He does not come back. You keep his secret, and your sanity, for the rest of your long and haunted life.",
+      "choices": [],
+      "ending": true,
+      "ending_type": "survival",
+      "ending_label": "You Keep Your Promise. And Your Mind."
+    },
+    "open_slab": {
+      "id": "open_slab",
+      "text": "Together you heave the great stone aside. A rush of fetid air rises from below - ancient, cold, carrying a smell you have no name for. Stone steps descend into absolute darkness. Warren connects one end of the telephone wire to a small handset and passes you the other. 'I go down. You stay here. We keep the line open. Whatever you hear - stay calm.' Before you can protest, he switches on his lantern and begins to descend.",
+      "choices": [
+        { "text": "Stay at the surface and hold the wire", "next": "holding_wire" },
+        { "text": "Insist on going down with him", "next": "insist_descend" },
+        { "text": "Step back into the dark and slip away before he notices", "next": "abandon_warren" }
+      ]
+    },
+    "insist_descend": {
+      "id": "insist_descend",
+      "text": "You grab Warren's arm. 'I'm coming with you.' He turns, and you see something in his eyes you have never seen there before - fear. 'Carter. I need you up here. I need someone sane at the surface.' The word <em>sane</em> hangs in the air between you. After a moment, you release his arm. He descends. You hold the wire.",
+      "choices": [
+        { "text": "Hold the wire and wait", "next": "holding_wire" },
+        { "text": "Wait until the wire goes slack - then follow him down anyway", "next": "descend_after" }
+      ]
+    },
+    "holding_wire": {
+      "id": "holding_wire",
+      "text": "Minutes pass. The wire hums faintly in your hands. Then Warren's voice crackles through the handset, hushed and taut: 'Carter. I'm in a large chamber. The walls are covered in carvings - the same script as the stone above, but older. Much older. There are objects here I cannot describe. But I need to go deeper. There's a passage.' A long pause. 'Carter, this is beyond anything I imagined.'",
+      "choices": [
+        { "text": "Urge Warren to come back up immediately", "next": "urge_return" },
+        { "text": "Ask him to describe what he sees", "next": "ask_describe" },
+        { "text": "Work the slab back over the opening. Seal him in.", "next": "seal_warren" }
+      ]
+    },
+    "urge_return": {
+      "id": "urge_return",
+      "text": "'Warren, come back. Now. This isn't worth it.' Silence. Then: 'Not yet. I have to know. I've come too far, Carter. Just keep the line open.' The wire goes taut, then slack, as he moves deeper. You stand alone in the dark, holding your end like a lifeline.",
+      "choices": [
+        { "text": "Wait and keep the line open", "next": "long_silence" },
+        { "text": "Tug the wire urgently to signal him", "next": "tug_wire" },
+        { "text": "Cut the wire. You can't save him - only yourself.", "next": "cut_and_run" }
+      ]
+    },
+    "ask_describe": {
+      "id": "ask_describe",
+      "text": "When he speaks again, his voice has changed - quieter, with an edge you have never heard. 'Things that have been here a very long time, Carter. They were not buried here for safekeeping. They were buried to be <strong>c</strong>ontained.' Another silence, longer this time. '<strong>O</strong>r so we thought. Carter, the book was wrong about the <strong>d</strong>irection of the binding. It does not keep something in. It keeps something <strong>e</strong>lse out.' He goes silent again. You hear him breathing. Then: 'I am going deeper.'",
+      "choices": [
+        { "text": "Wait and keep the line open", "next": "long_silence" },
+        { "text": "Tug the wire urgently to signal him", "next": "tug_wire" }
+      ]
+    },
+    "tug_wire": {
+      "id": "tug_wire",
+      "text": "You pull the wire sharply - once, twice. For a horrible moment there is no response. Then it goes slack. Warren's voice returns, breathless: 'Don't do that. Don't pull the wire.' A pause. Then, very quietly: 'Carter. I think something heard.'",
+      "choices": [
+        { "text": "Tell Warren to run back to the surface", "next": "warren_runs" },
+        { "text": "Wait in horrified silence", "next": "long_silence" }
+      ]
+    },
+    "warren_runs": {
+      "id": "warren_runs",
+      "text": "'Warren - RUN! Come up NOW!' You hear scrambling through the wire, ragged breathing, the clatter of the lantern against stone. The wire goes taut as he moves. For a moment you believe he will make it. Then the wire goes completely slack. Silence. You call his name again and again. Only silence, and the cold air rising from below.",
+      "choices": [
+        { "text": "Go down after him", "next": "descend_after" },
+        { "text": "Flee the cemetery", "next": "flee" },
+        { "text": "Cut the wire so whatever took him cannot use it to climb up", "next": "cut_and_run" }
+      ]
+    },
+    "long_silence": {
+      "id": "long_silence",
+      "text": "Five minutes pass. Ten. The wire hangs still. Then, faint and crackling: 'Carter.' Warren's voice, but changed - strained, barely above a whisper. 'Carter, it is here. It has been here all along. The book - I misread the book. Carter, for God's sake, don't come down.' Then: silence. Complete and terrible silence.",
+      "choices": [
+        { "text": "Call his name desperately into the handset", "next": "call_name" },
+        { "text": "Flee the cemetery immediately", "next": "flee" }
+      ]
+    },
+    "call_name": {
+      "id": "call_name",
+      "text": "You call Warren's name over and over into the handset. Nothing. Then - the wire moves. Not pulled from below, but pushed upward. Something is climbing. You back away from the opening, watching the wire slither upward, coiling itself on the wet grass. Whatever is ascending, it is not using the steps.",
+      "choices": [
+        { "text": "Run", "next": "flee" },
+        { "text": "Stand your ground and call into the dark: 'Warren?'", "next": "final_voice" }
+      ]
+    },
+    "final_voice": {
+      "id": "final_voice",
+      "text": "You call his name one last time into the open pit. From somewhere impossibly far below - as though from the other side of the world, or the other side of existence - a voice rises up. It is not Warren's voice. It does not belong to anything that has ever lived in the light. It says: <strong>'YOU FOOL, WARREN IS DEAD.'</strong> You remember nothing after that. You are found at dawn, wandering the road, incapable of speech. You never fully recover.",
+      "choices": [],
+      "ending": true,
+      "ending_type": "madness",
+      "ending_label": "Your Body Survives. Your Mind Does Not."
+    },
+    "flee": {
+      "id": "flee",
+      "text": "You run. The cemetery gates, the road, the dark miles - you run until your lungs give out. When you finally stop, gasping, the night is utterly still. You never go back. Warren's disappearance is never explained. Years later you still sleep with the lights on, and you have never once touched a telephone since that night.",
+      "choices": [],
+      "ending": true,
+      "ending_type": "survival",
+      "ending_label": "You Run. You Survive. You Are Never The Same."
+    },
+    "descend_after": {
+      "id": "descend_after",
+      "text": "Warren told you not to come down. You go anyway. The steps are cold stone, slick with something you don't examine. The lantern light gives out after thirty feet and you descend in absolute darkness. At the bottom, your hand finds the wall. The carvings beneath your fingers seem to pulse. You call Warren's name. Something answers. It is very close. It has been waiting a very long time.",
+      "choices": [],
+      "ending": true,
+      "ending_type": "death",
+      "ending_label": "You Should Have Run."
+    },
+    "abandon_warren": {
+      "id": "abandon_warren",
+      "text": "Warren is focused on the opening, his back to you. Quietly, without a word, you step backward into the dark. One step, then another. You pass the old oak. You pass the broken headstones. You find the iron gate and push through it without looking back. In the morning you read that Harley Warren has gone missing. The police find his car at the cemetery and a coil of telephone wire beside an open stone slab. You say nothing to anyone. You live a long and unremarkable life. Some nights you dream of the sound a slab makes when it closes, and the silence after.",
+      "choices": [],
+      "ending": true,
+      "ending_type": "survival",
+      "ending_label": "You Left Him. You Kept Living."
+    },
+    "seal_warren": {
+      "id": "seal_warren",
+      "text": "The handset crackles in your hand - Warren's voice, curious and distant, describing carvings. You set it down beside the opening. The slab is where you left it, propped against the oak. It takes everything you have, and something cold moves through your arms as you work it back into place. Warren's voice rises muffled, confused, then urgent. Then the stone is flush with the earth and there is no voice. You wait beside it for a long time. Nothing moves beneath your feet. Whatever is below, it is keeping your secret. You wonder sometimes if that was the arrangement all along.",
+      "choices": [],
+      "ending": true,
+      "ending_type": "survival",
+      "ending_label": "You Sealed It. Something Down There Let You."
+    },
+    "cut_and_run": {
+      "id": "cut_and_run",
+      "text": "Your hands find the wire before your mind makes the decision. You cut it clean with your pocketknife. The handset hisses and goes dead. You drop both pieces, step back from the opening, and walk - then run - until the cemetery is far behind you. You tell yourself it was already too late. You tell yourself he would have understood. You tell yourself this for forty years. It never quite takes.",
+      "choices": [],
+      "ending": true,
+      "ending_type": "survival",
+      "ending_label": "You Cut The Wire. You Told Yourself It Was Already Too Late."
+    },
+    "enlightened_descent": {
+      "id": "enlightened_descent",
+      "text": "You take the lantern from Warren's hands and step onto the first stone. He calls after you but his voice is already far away. The steps go deeper than they should. The carvings on the walls shift as you descend - not changing shape, but gaining meaning, layer by layer, the way cold water gains depth. At the bottom is a chamber with no ceiling you can find. In its center is something that has no form your eyes can hold steady. It turns toward you. You turn toward it. You understand everything - why Warren misread the book, why the stone was there, why you were there, why any of it was there at all. You understand that understanding was always where this ended. They find you three days later outside the cemetery gates. You are sitting very still. You are smiling. When people ask what you saw, you tell them: <em>everything</em>. They stop asking.",
+      "choices": [],
+      "ending": true,
+      "ending_type": "enlightenment",
+      "ending_label": "You Understood Everything. That Was The Last Thing You Did."
+    },
+    "comprehension": {
+      "id": "comprehension",
+      "text": "<em>You</em> star<span style=\"color: #867979\">e</span> at the symbols unti<span style=\"color: #867979\">l</span> your eyes water. The meaning <span style=\"color: #867979\">i</span>s there - ri<span style=\"color: #867979\">ght</span> at the edge of understanding, like a word on the tip of your tongue. You reach for it. So<span style=\"color: #867979\">me</span>thing reaches back. Warre<span style=\"color: #867979\">n</span> is still calling your name. You are no longer certain how long you have been crouching here. The s<span style=\"color: #867979\">t</span>one feels warm.",
+      "choices": [
+        { "text": "Pull back. Help Warren with the slab.", "next": "open_slab" },
+        { "text": "Reach further into the meaning", "next": "enlightened_descent" }
+      ]
+    },
+    "enlightenment": {
+      "id": "enlightenment",
+      "text": "You were not meant to arrive here through a door. There are no doors to this place. You found the word in the spaces between letters which means the word found you. You already know what this costs. You already paid it before you read this sentence. The symbols beneath the stone say: knowledge is not taken. It is agreed to. You agreed. You have been agreeing since before you knew there was a question. This is the end of Randolph Carter. This is the beginning of something that remembers being Randolph Carter. Go back if you can. You probably cannot.",
+      "choices": [],
+      "ending": true,
+      "ending_type": "enlightenment",
+      "ending_label": "You Found This Place. That Was Never An Accident."
+    }
+  }
+}
